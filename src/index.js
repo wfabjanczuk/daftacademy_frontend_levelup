@@ -1,3 +1,3 @@
-import appendGreeting from './script.js';
+import './main.scss'
 
-appendGreeting();
+document.body.innerHTML = '<h1>Hello!</h1> <p>I am styled.</p>'
