@@ -1,0 +1,7 @@
+@function scale($factor, $value) {
+  @return $factor * $value;
+}
+
+@function calc_image_side($unit, $container_padding, $image_margin) {
+  @return (100vw - 2 * ($container_padding + $unit) - 8 * $image_margin) / 3;
+}

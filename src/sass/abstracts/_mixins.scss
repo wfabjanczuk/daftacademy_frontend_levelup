@@ -1,0 +1,5 @@
+@mixin fill_background($file) {
+  background-image: url($images_path+$file);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -12,10 +12,13 @@
     "license": "ISC",
     "dependencies": {
         "css-loader": "^2.1.1",
+        "css-reset-and-normalize-sass": "^0.1.2",
+        "file-loader": "^3.0.1",
         "mini-css-extract-plugin": "^0.5.0",
         "node-sass": "^4.11.0",
         "postcss-loader": "^3.0.0",
         "postcss-preset-env": "^6.6.0",
+        "resolve-url-loader": "^3.0.1",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
         "webpack": "^4.29.6",

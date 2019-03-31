@@ -34,10 +34,18 @@ module.exports = {
                     isProduction
                         ? MiniCssExtractPlugin.loader
                         : { loader: 'style-loader', options: { sourceMap: true } },
-                    { loader: 'css-loader', options: { sourceMap: true } },
-                    { loader: 'postcss-loader', options: { sourceMap: true } },
-                    { loader: 'sass-loader', options: { sourceMap: true } }
+                    { loader: 'css-loader', options: { sourceMap: !isProduction } },
+                    { loader: 'postcss-loader', options: { sourceMap: !isProduction } },
+                    { loader: 'resolve-url-loader', options: { sourceMap: !isProduction } },
+                    { loader: 'sass-loader', options: { sourceMap: !isProduction } }
                 ]
+            },
+            {
+                test: /\.jpg$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'img/[name].[ext]'
+                }
             }
         ]
     }

@@ -1,0 +1,62 @@
+$plate_padding: scale(2, $unit);
+$image_margin: scale(0.5, $unit);
+$image_side: calc_image_side($unit, $plate_padding, $image_margin);
+
+.plate {
+  margin: $unit;
+  padding: $plate_padding;
+  background-color: lightblue;
+}
+
+.drinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drinks__kinds {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drinks__kind {
+  display: inline-block;
+}
+
+.drinks__products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.drinks__product {
+  flex: 0 1 $image_side;
+  height: $image_side;
+  margin: $image_margin;
+}
+
+.drinks__bijou {
+  @include fill_background("bijou.jpg");
+}
+
+.drinks__negroni {
+  @include fill_background("negroni.jpg");
+}
+
+.drinks__mojito {
+  @include fill_background("mojito.jpg");
+}
+
+.drinks__rattlesnake {
+  @include fill_background("rattlesnake.jpg");
+}
+
+.drinks__eggnogg {
+  @include fill_background("eggnogg.jpg");
+}
+
+.drinks__zinger {
+  @include fill_background("zinger.jpg");
+}
