@@ -1,11 +1,32 @@
+$plate_margin: scale(0.25, $unit);
 $plate_padding: scale(2, $unit);
+
+$logo_offset_top: -20px;
+$logo_offset_left: scale(0.5, $unit);
+$logo_color: black;
+
 $image_margin: scale(0.5, $unit);
 $image_side: calc_image_side($unit, $plate_padding, $image_margin);
 
 .plate {
-  margin: $unit;
+  position: relative;
+  margin: 0 $plate_margin;
   padding: $plate_padding;
-  background-color: lightblue;
+  background-color: #d8eff3;
+}
+
+.logo {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  height: 40px;
+  width: 100px;
+  top: $logo_offset_top;
+  left: $logo_offset_left;
+  border: 2px solid $logo_color;
 }
 
 .drinks {
@@ -37,26 +58,26 @@ $image_side: calc_image_side($unit, $plate_padding, $image_margin);
   margin: $image_margin;
 }
 
-.drinks__bijou {
+.drinks__product--bijou {
   @include fill_background("bijou.jpg");
 }
 
-.drinks__negroni {
+.drinks__product--negroni {
   @include fill_background("negroni.jpg");
 }
 
-.drinks__mojito {
+.drinks__product--mojito {
   @include fill_background("mojito.jpg");
 }
 
-.drinks__rattlesnake {
+.drinks__product--rattlesnake {
   @include fill_background("rattlesnake.jpg");
 }
 
-.drinks__eggnogg {
+.drinks__product--eggnogg {
   @include fill_background("eggnogg.jpg");
 }
 
-.drinks__zinger {
+.drinks__product--zinger {
   @include fill_background("zinger.jpg");
 }
