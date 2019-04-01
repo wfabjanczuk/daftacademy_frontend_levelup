@@ -18,7 +18,7 @@ $image_side: calc_image_side($unit, $plate_padding-horizontal, $image_margin);
     align-items: center;
     position: absolute;
     height: 50px;
-    width: 100px;
+    width: 120px;
     top: -25px;
     left: scale(0.5, $unit);
     border: 2px solid $powderblue-10;
