@@ -29,11 +29,23 @@ footer {
     @include fill_background("dribbble.svg");
   }
 
+  .contact__icon--dribbble:hover {
+    @include fill_background("dribbble_hover.svg");
+  }
+
   .contact__icon--instagram {
     @include fill_background("instagram.svg");
   }
 
+  .contact__icon--instagram:hover {
+    @include fill_background("instagram_hover.svg");
+  }
+
   .contact__icon--facebook {
     @include fill_background("facebook.svg");
+  }
+
+  .contact__icon--facebook:hover {
+    @include fill_background("facebook_hover.svg");
   }
 }
