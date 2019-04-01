@@ -1,40 +1,39 @@
-$footer_margin_horizontal: scale(0.25, $unit);
-$footer_margin_vertical: scale(0.5, $unit);
 $icon_side: 16px;
 $icon_spacing: scale(0.5, $icon_side);
 
 footer {
-  margin: $footer_margin_vertical $footer_margin_horizontal;
-}
+  margin: scale(0.5, $unit) scale(0.25, $unit);
+  padding: 0 scale(0.5, $unit);
 
-.contact {
-  display: flex;
-  justify-content: space-between;
-}
+  .contact {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.contact__social {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+  .contact__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.contact__tile {
-  margin: 0 $icon_spacing;
-}
+  .contact__tile {
+    margin: 0 $icon_spacing;
+  }
 
-.contact__icon {
-  height: $icon_side;
-  width: $icon_side;
-}
+  .contact__icon {
+    height: $icon_side;
+    width: $icon_side;
+  }
 
-.contact__icon--dribbble {
-  @include fill_background("dribbble.svg");
-}
+  .contact__icon--dribbble {
+    @include fill_background("dribbble.svg");
+  }
 
-.contact__icon--instagram {
-  @include fill_background("instagram.svg");
-}
+  .contact__icon--instagram {
+    @include fill_background("instagram.svg");
+  }
 
-.contact__icon--facebook {
-  @include fill_background("facebook.svg");
+  .contact__icon--facebook {
+    @include fill_background("facebook.svg");
+  }
 }

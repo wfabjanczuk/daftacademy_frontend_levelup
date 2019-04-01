@@ -1,83 +1,86 @@
 $plate_margin: scale(0.25, $unit);
-$plate_padding: scale(2, $unit);
-
-$logo_offset_top: -20px;
-$logo_offset_left: scale(0.5, $unit);
-$logo_color: black;
+$plate_padding-horizontal: scale(2, $unit);
+$plate_padding-vertical: scale(1.5, $unit);
 
 $image_margin: scale(0.5, $unit);
-$image_side: calc_image_side($unit, $plate_padding, $image_margin);
+$image_side: calc_image_side($unit, $plate_padding-horizontal, $image_margin);
 
 .plate {
   position: relative;
   margin: 0 $plate_margin;
-  padding: $plate_padding;
-  background-color: #d8eff3;
-}
+  padding: $plate_padding-vertical $plate_padding-horizontal;
+  background-color: $paleturquoise-95;
 
-.logo {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  font-size: 20px;
-  height: 40px;
-  width: 100px;
-  top: $logo_offset_top;
-  left: $logo_offset_left;
-  border: 2px solid $logo_color;
-}
+  .logo {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    top: -25px;
+    left: scale(0.5, $unit);
+    border: 2px solid $powderblue-10;
+  }
 
-.drinks {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .drinks {
+    display: flex;
+    flex-direction: column;
 
-.drinks__kinds {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    .drinks__kinds {
+      display: flex;
+      justify-content: space-between;
 
-.drinks__kind {
-  display: inline-block;
-}
+      .drinks__kind {
+        display: inline-block;
+        padding: 3px;
+      }
+    }
 
-.drinks__products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
+    .drinks__products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
 
-.drinks__product {
-  flex: 0 1 $image_side;
-  height: $image_side;
-  margin: $image_margin;
-}
+      .drinks__product {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 $image_side;
+        height: $image_side;
+        margin: $image_margin;
+      }
 
-.drinks__product--bijou {
-  @include fill_background("bijou.jpg");
-}
+      .drinks__product:hover {
+        border: 4px solid $sandybrown-80;
+      }
 
-.drinks__product--negroni {
-  @include fill_background("negroni.jpg");
-}
+      .drinks__product--bijou {
+        @include fill_background("bijou.jpg");
+      }
 
-.drinks__product--mojito {
-  @include fill_background("mojito.jpg");
-}
+      .drinks__product--negroni {
+        @include fill_background("negroni.jpg");
+      }
 
-.drinks__product--rattlesnake {
-  @include fill_background("rattlesnake.jpg");
-}
+      .drinks__product--mojito {
+        @include fill_background("mojito.jpg");
+      }
 
-.drinks__product--eggnogg {
-  @include fill_background("eggnogg.jpg");
-}
+      .drinks__product--rattlesnake {
+        @include fill_background("rattlesnake.jpg");
+      }
 
-.drinks__product--zinger {
-  @include fill_background("zinger.jpg");
+      .drinks__product--eggnogg {
+        @include fill_background("eggnogg.jpg");
+      }
+
+      .drinks__product--zinger {
+        @include fill_background("zinger.jpg");
+      }
+    }
+  }
 }

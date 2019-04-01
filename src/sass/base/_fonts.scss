@@ -1,0 +1,28 @@
+.text {
+  font-family: "Lato", "Open Sans", "Arial";
+  font-size: 14px;
+  text-align: center;
+  color: $paleseagreen-70;
+}
+
+.text--logo {
+  font-family: "ZCOOL XiaoWei", "Crimson Text", "Noto Serif";
+  font-size: 24px;
+  color: $powderblue-10;
+}
+
+.text--product {
+  font-family: "Open Sans", "Helvetica";
+  font-weight: bold;
+  font-size: 32px;
+  color: $white;
+}
+
+.text--menu:hover {
+  color: $powderblue-10;
+  border-bottom: 1px solid $powderblue-10;
+}
+
+.text--mail {
+  color: $powderblue-10;
+}
